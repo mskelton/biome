@@ -163,6 +163,7 @@ pub type NoNonNullAssertion =
 pub type NoNoninteractiveElementToInteractiveRole = < lint :: a11y :: no_noninteractive_element_to_interactive_role :: NoNoninteractiveElementToInteractiveRole as biome_analyze :: Rule > :: Options ;
 pub type NoNoninteractiveTabindex = < lint :: a11y :: no_noninteractive_tabindex :: NoNoninteractiveTabindex as biome_analyze :: Rule > :: Options ;
 pub type NoNonoctalDecimalEscape = < lint :: correctness :: no_nonoctal_decimal_escape :: NoNonoctalDecimalEscape as biome_analyze :: Rule > :: Options ;
+pub type NoOctal = <lint::nursery::no_octal::NoOctal as biome_analyze::Rule>::Options;
 pub type NoOctalEscape =
     <lint::nursery::no_octal_escape::NoOctalEscape as biome_analyze::Rule>::Options;
 pub type NoPackagePrivateImports = < lint :: nursery :: no_package_private_imports :: NoPackagePrivateImports as biome_analyze :: Rule > :: Options ;
