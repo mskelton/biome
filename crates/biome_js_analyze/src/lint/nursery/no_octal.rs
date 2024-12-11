@@ -42,11 +42,10 @@ impl Rule for NoOctal {
     fn run(ctx: &RuleContext<Self>) -> Self::Signals {
         let number_literal_expression = ctx.query();
         let _model = ctx.model();
-        let first_token = number_literal_expression
-            .clone()
-            .into_syntax()
-            .first_token()?;
-        println!("{:?}", first_token);
+        let value = number_literal_expression.value_token().ok()?;
+        let is_octal = value.text().starts_with('0');
+
+        println!("{:?}", is_octal);
 
         return None;
 

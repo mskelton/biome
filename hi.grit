@@ -1,0 +1,5 @@
+language js
+
+r`[0-9]` @mark => `mark` where {
+  $my_message <: string()
+}
